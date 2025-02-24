@@ -90,3 +90,22 @@ ROBOTSTXT_OBEY = True
 # Set settings whose default value is deprecated to a future-proof value
 TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 FEED_EXPORT_ENCODING = "utf-8"
+
+
+# User-Agent pour simuler un vrai utilisateur
+USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+
+# Ne pas respecter le fichier robots.txt pour scraper plus de pages
+ROBOTSTXT_OBEY = False
+
+# Limiter le délai entre les requêtes pour éviter le bannissement
+DOWNLOAD_DELAY = 1
+CONCURRENT_REQUESTS = 16
+
+# Exporter les données dans un fichier JSON
+FEEDS = {
+    'output.json': {
+        'format': 'json',
+        'overwrite': True
+    },
+}
